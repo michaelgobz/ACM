@@ -32,7 +32,14 @@ public class Customer
 
     public string FullName {
         get{
-            return $"{FirstName},{LastName}";
+            string fullName =  LastName;
+            if(!string.IsNullOrWhiteSpace(FirstName)){
+                if(!string.IsNullOrWhiteSpace(LastName)){
+                    fullName+=",";
+                }
+                fullName += LastName;
+            }
+            return fullName;
         }
     }
     public string EmailAddress {
@@ -48,5 +55,10 @@ public class Customer
     public string Phonenumber{
         get;
         private set ;
+    }
+
+    public static int instanceCounter {
+        get;
+        set;
     }
 }
