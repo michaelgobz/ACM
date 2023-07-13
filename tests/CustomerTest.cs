@@ -91,4 +91,41 @@ public class CustomerTest
         // Assert
         Assert.Equal(count, customer.instanceCounter);
     }
+
+    public void ValidateCustomer()
+    {
+
+        // Arrange
+        var customer = new Customer
+        {
+            FirstName = "Michael",
+            LastName = "Goboola"
+        };
+
+        var expected = true;
+    
+        // Act
+        var actual = customer.Validate();
+
+        // Assert
+        Assert.AreEqual(expected, actual);
+    }
+
+    public void ValidateCustomerHasOneName()
+    {
+
+        // Arrange
+        var customer = new Customer
+        {
+            EmailAddress = "raniahgobz@outlook.com"
+        };
+
+        var expected = false;
+    
+        // Act
+        var actual = customer.Validate();
+
+        // Assert
+        Assert.AreEqual(expected, actual);
+    }
 }

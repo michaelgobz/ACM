@@ -61,4 +61,22 @@ public class Customer
         get;
         set;
     }
+
+    public bool Validate(){
+        var isValid = true;
+        if(string.IsNullOrWhiteSpace(FirstName)) isValid = false;
+        if(string.IsNullOrWhiteSpace(LastName)) isValid = false;
+
+        return isValid;
+    }
+
+    public Customer Retrieve(){
+
+        return new Customer();
+    
+    }
+
+    public List<Customer> RetrieveCustomers(){
+        return new List<Customer>();
+    }
 }
