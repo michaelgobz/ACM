@@ -25,7 +25,7 @@ namespace tests
 			Assert.AreEqual(expected, customer.FullName);
 		}
 		[TestMethod]
-		public void TestFirstNameIsValid()
+		public void TestLastNameIsValid()
 		{
 
 			// Arrange
@@ -41,7 +41,7 @@ namespace tests
 			Assert.AreEqual(expected, customer.FullName);
 		}
 		[TestMethod]
-		public void TestLastNameIsValid()
+		public void TestFirstNameIsValid()
 		{
 
 			// Arrange

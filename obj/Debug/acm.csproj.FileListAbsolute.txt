@@ -4,3 +4,9 @@ C:\Users\Administrator\source\repos\acm\obj\Debug\acm.csproj.AssemblyReference.c
 C:\Users\Administrator\source\repos\acm\obj\Debug\acm.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\source\repos\acm\obj\Debug\acm.dll
 C:\Users\Administrator\source\repos\acm\obj\Debug\acm.pdb
+C:\Users\Administrator\Source\Repos\michaelgobz\ACM\bin\Debug\acm.dll
+C:\Users\Administrator\Source\Repos\michaelgobz\ACM\bin\Debug\acm.pdb
+C:\Users\Administrator\Source\Repos\michaelgobz\ACM\obj\Debug\acm.csproj.AssemblyReference.cache
+C:\Users\Administrator\Source\Repos\michaelgobz\ACM\obj\Debug\acm.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\Source\Repos\michaelgobz\ACM\obj\Debug\acm.dll
+C:\Users\Administrator\Source\Repos\michaelgobz\ACM\obj\Debug\acm.pdb

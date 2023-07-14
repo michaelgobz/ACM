@@ -49,14 +49,15 @@ namespace acm.BL
 			get
 			{
 				string fullName = LastName;
-				if (!string.IsNullOrWhiteSpace(FirstName))
+				if (string.IsNullOrWhiteSpace(FirstName))
 				{
-					if (!string.IsNullOrWhiteSpace(LastName))
+					if (string.IsNullOrWhiteSpace(LastName))
 					{
-						fullName += ",";
+						fullName += ", ";
 					}
 					fullName += LastName;
 				}
+
 				return fullName;
 			}
 		}
