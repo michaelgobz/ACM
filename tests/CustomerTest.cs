@@ -1,131 +1,135 @@
-using ACM.BL;
-namespace ACM.tests;
+﻿using acm.BL;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 
-[TestClass]
-public class CustomerTest
+namespace tests
 {
-    [TestMethod]
-    public void TestFullNameIsValid()
-    {
+	[TestClass]
+	public class CustomerTest
+	{
+		[TestMethod]
+		public void TestFullNameIsValid()
+		{
 
-        // Arrange
-        var customer = new Customer
-        {
-            FirstName = "Michael",
-            LastName = "Goboola"
-        };
-    
-        // Act
-        var expected = "Michael, Goboola";
+			// Arrange
+			var customer = new Customer
+			{
+				FirstName = "Michael",
+				LastName = "Goboola"
+			};
 
-        // Assert
-        Assert.AreEqual(expected, customer.FullName);
-    }
+			// Act
+			var expected = "Michael, Goboola";
 
-    public void TestFirstNameIsValid()
-    {
+			// Assert
+			Assert.AreEqual(expected, customer.FullName);
+		}
+		[TestMethod]
+		public void TestFirstNameIsValid()
+		{
 
-        // Arrange
-        var customer = new Customer
-        {
-            LastName = "Goboola"
-        };
-    
-        // Act
-        var expected = "Goboola";
+			// Arrange
+			var customer = new Customer
+			{
+				LastName = "Goboola"
+			};
 
-        // Assert
-        Assert.AreEqual(expected, customer.FullName);
-    }
+			// Act
+			var expected = "Goboola";
 
-    public void TestLastNameIsValid()
-    {
+			// Assert
+			Assert.AreEqual(expected, customer.FullName);
+		}
+		[TestMethod]
+		public void TestLastNameIsValid()
+		{
 
-        // Arrange
-        var customer = new Customer
-        {
-            FirstName = "Michael",
-        };
-    
-        // Act
-        var expected = "Michael, ";
+			// Arrange
+			var customer = new Customer
+			{
+				FirstName = "Michael",
+			};
 
-        // Assert
-        Assert.AreEqual(expected, customer.FullName);
-    }
+			// Act
+			var expected = "Michael, ";
 
-    public void StaticTest()
-    {
+			// Assert
+			Assert.AreEqual(expected, customer.FullName);
+		}
+		[TestMethod]
+		public void StaticTest()
+		{
 
-        // Arrange
-        var c1 = new Customer
-        {
-            FirstName = "Michael",
-            LastName = "Goboola"
-        };
-        Customer.instanceCounter += 1;
+			// Arrange
+			var c1 = new Customer
+			{
+				FirstName = "Michael",
+				LastName = "Goboola"
+			};
+			Customer.instanceCounter += 1;
 
-        var c2 = new Customer
-        {
-            FirstName = "Moureen",
-            LastName = "Nafula"
-        };
-        Customer.instanceCounter += 1;
+			var c2 = new Customer
+			{
+				FirstName = "Moureen",
+				LastName = "Nafula"
+			};
+			Customer.instanceCounter += 1;
 
-        var c3 = new Customer
-        {
-            FirstName = "Agaba",
-            LastName = "Atuhaire"
-        };
-        Customer.instanceCounter += 1;
+			var c3 = new Customer
+			{
+				FirstName = "Agaba",
+				LastName = "Atuhaire"
+			};
+			Customer.instanceCounter += 1;
 
-        var c4 = new Customer
-        {
-            FirstName = "Prudence",
-            LastName = "Nuwagaba"
-        };
-        Customer.instanceCounter += 1;
-    
-        // Act
-        var count= 4;
-        // Assert
-        Assert.Equal(count, customer.instanceCounter);
-    }
+			var c4 = new Customer
+			{
+				FirstName = "Prudence",
+				LastName = "Nuwagaba"
+			};
+			Customer.instanceCounter += 1;
 
-    public void ValidateCustomer()
-    {
+			// Act
+			var count = 4;
+			// Assert
+			Assert.AreEqual(count, Customer.instanceCounter);
+		}
+		[TestMethod]
+		public void ValidateCustomer()
+		{
 
-        // Arrange
-        var customer = new Customer
-        {
-            FirstName = "Michael",
-            LastName = "Goboola"
-        };
+			// Arrange
+			var customer = new Customer
+			{
+				FirstName = "Michael",
+				LastName = "Goboola"
+			};
 
-        var expected = true;
-    
-        // Act
-        var actual = customer.Validate();
+			var expected = true;
 
-        // Assert
-        Assert.AreEqual(expected, actual);
-    }
+			// Act
+			var actual = customer.Validate();
 
-    public void ValidateCustomerHasOneName()
-    {
+			// Assert
+			Assert.AreEqual(expected, actual);
+		}
+		[TestMethod]
+		public void ValidateCustomerHasOneName()
+		{
 
-        // Arrange
-        var customer = new Customer
-        {
-            EmailAddress = "raniahgobz@outlook.com"
-        };
+			// Arrange
+			var customer = new Customer
+			{
+				EmailAddress = "raniahgobz@outlook.com"
+			};
 
-        var expected = false;
-    
-        // Act
-        var actual = customer.Validate();
+			var expected = false;
 
-        // Assert
-        Assert.AreEqual(expected, actual);
-    }
+			// Act
+			var actual = customer.Validate();
+
+			// Assert
+			Assert.AreEqual(expected, actual);
+		}
+	}
 }

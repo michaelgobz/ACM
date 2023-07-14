@@ -1,82 +1,109 @@
-﻿namespace ACM.BL;
-public class Customer
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace acm.BL
 {
+	public class Customer
+	{
 
-    public int CustomerId {
-        get;
-        private set;
-    }
+		public int CustomerId
+		{
+			get;
+			private set;
+		}
 
-    private string _FirstName;
-    private string _LastName;
+		private string _FirstName;
+		private string _LastName;
 
-    public string FirstName {
-        get {
-            return _FirstName;
-        }
+		public string FirstName
+		{
+			get
+			{
+				return _FirstName;
+			}
 
-        set {
-            _FirstName = value;
-        }
-    }
+			set
+			{
+				_FirstName = value;
+			}
+		}
 
-    public string LastName {
-        get {
-            return _LastName;
-        }
+		public string LastName
+		{
+			get
+			{
+				return _LastName;
+			}
 
-        set {
-            _LastName = value;
-        }
-    }
+			set
+			{
+				_LastName = value;
+			}
+		}
 
-    public string FullName {
-        get{
-            string fullName =  LastName;
-            if(!string.IsNullOrWhiteSpace(FirstName)){
-                if(!string.IsNullOrWhiteSpace(LastName)){
-                    fullName+=",";
-                }
-                fullName += LastName;
-            }
-            return fullName;
-        }
-    }
-    public string EmailAddress {
-        get;
-        private set;
-    }
+		public string FullName
+		{
+			get
+			{
+				string fullName = LastName;
+				if (!string.IsNullOrWhiteSpace(FirstName))
+				{
+					if (!string.IsNullOrWhiteSpace(LastName))
+					{
+						fullName += ",";
+					}
+					fullName += LastName;
+				}
+				return fullName;
+			}
+		}
+		public string EmailAddress
+		{
+			get;
+			set;
+		}
 
-    public string Address {
-        get;
-        private set;
-    }
+		public string Address
+		{
+			get;
+			private set;
+		}
 
-    public string Phonenumber{
-        get;
-        private set ;
-    }
+		public string Phonenumber
+		{
+			get;
+			private set;
+		}
 
-    public static int instanceCounter {
-        get;
-        set;
-    }
+		public static int instanceCounter
+		{
+			get;
+			set;
+		}
 
-    public bool Validate(){
-        var isValid = true;
-        if(string.IsNullOrWhiteSpace(FirstName)) isValid = false;
-        if(string.IsNullOrWhiteSpace(LastName)) isValid = false;
+		public bool Validate()
+		{
+			var isValid = true;
+			if (string.IsNullOrWhiteSpace(FirstName)) isValid = false;
+			if (string.IsNullOrWhiteSpace(LastName)) isValid = false;
 
-        return isValid;
-    }
+			return isValid;
+		}
 
-    public Customer Retrieve(){
+		public Customer Retrieve()
+		{
 
-        return new Customer();
-    
-    }
+			return new Customer();
 
-    public List<Customer> RetrieveCustomers(){
-        return new List<Customer>();
-    }
+		}
+
+		public List<Customer> RetrieveCustomers()
+		{
+			return new List<Customer>();
+		}
+	}
+
 }

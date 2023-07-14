@@ -1,0 +1,6 @@
+C:\Users\Administrator\source\repos\acm\bin\Debug\acm.dll
+C:\Users\Administrator\source\repos\acm\bin\Debug\acm.pdb
+C:\Users\Administrator\source\repos\acm\obj\Debug\acm.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\acm\obj\Debug\acm.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\acm\obj\Debug\acm.dll
+C:\Users\Administrator\source\repos\acm\obj\Debug\acm.pdb

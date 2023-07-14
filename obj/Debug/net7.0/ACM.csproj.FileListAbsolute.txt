@@ -1,5 +1,0 @@
-D:\Desktop_files\projects\ACM\obj\Debug\net7.0\ACM.csproj.AssemblyReference.cache
-D:\Desktop_files\projects\ACM\obj\Debug\net7.0\ACM.GeneratedMSBuildEditorConfig.editorconfig
-D:\Desktop_files\projects\ACM\obj\Debug\net7.0\ACM.AssemblyInfoInputs.cache
-D:\Desktop_files\projects\ACM\obj\Debug\net7.0\ACM.AssemblyInfo.cs
-D:\Desktop_files\projects\ACM\obj\Debug\net7.0\ACM.csproj.CoreCompileInputs.cache
