@@ -9,11 +9,16 @@ namespace acm.BL
     
     public class Customer : IEntity
     {
+		private int _customerId;
 
         public int entityId
         {
-            get;
-            private set;
+            get {
+				return _customerId;
+			}
+            private set {
+				_customerId = value;
+			}
         }
 
         private string _FirstName;
@@ -90,6 +95,14 @@ namespace acm.BL
             get;
             set;
         }
+
+		public Customer(){
+
+		}
+
+		public Customer(int id){
+			entityId = id;
+		}
 
         public bool Validate()
         {
