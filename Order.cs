@@ -7,7 +7,10 @@ namespace acm.BL{
     public class Order
     {
         private int _orderId;
-        public DateTimeOffset? OrderDate {get; set;}
+        public DateTimeOffset? OrderDate {get; 
+        set {
+            OrderDate = DateTimeOffset.
+        }}
 
         public int orderId {
             get;
@@ -24,11 +27,12 @@ namespace acm.BL{
         public Order(int id)
         {
             orderId = id;
+            OrderDate = DateTimeOffset.Now();
         }
 
         public Order Retrieve(int Id)
         {
-            return new Product();
+            return new Order();
         }
 
         public List<Order> Retrieve()
@@ -39,10 +43,7 @@ namespace acm.BL{
         public bool Validate()
         {
             var isValid = true;
-            if (dateTimeOffset.IsNullOrWhiteSpace(productName)) isValid = false;
-            if (string.IsNullOrWhiteSpace(productDescription)) isValid = false;
-            if (decimal.IsNegative(currentPrice)) isValid = false;
-
+            if(OrderDate == null) isValid = false;
             return isValid;
         }
 
