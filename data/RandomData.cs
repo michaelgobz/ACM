@@ -192,7 +192,116 @@ namespace acm.data
         currentPrice = 30
     };
 
+    // order items
+    var item1 = new OrderItem(1)
+    {
+        productId = 1,
+        Quantity= 2,
+        PurchasePrice = 1000
+    };
+
+    var item2 = new OrderItem(2)
+    {
+        productId = 1,
+        Quantity= 4,
+        PurchasePrice = 2000
+    };
+
+    var item3 = new OrderItem(3)
+    {
+        productId = 2,
+        Quantity= 2,
+        PurchasePrice = 5000
+    };
+
+    var item4 = new OrderItem(4)
+    {
+        productId = 4,
+        Quantity= 20,
+        PurchasePrice = 1000
+    };
+
+    var item5 = new OrderItem(5)
+    {
+        productId = 3,
+        Quantity= 2,
+        PurchasePrice = 3000
+    };
+
+    var item6 = new OrderItem(6)
+    {
+        productId = 7,
+        Quantity= 10,
+        PurchasePrice = 300
+    };
+
+    var item7 = new OrderItem(7)
+    {
+        productId = 3,
+        Quantity= 2,
+        PurchasePrice = 3000
+    };
+
+    var item8 = new OrderItem(8)
+    {
+        productId = 6,
+        Quantity= 4,
+        PurchasePrice = 2400
+    };
+
+    var item9 = new OrderItem(9)
+    {
+        productId = 1,
+        Quantity= 10,
+        PurchasePrice = 5000
+    };
+
+    var item10 = new OrderItem(10)
+    {
+        productId = 5,
+        Quantity= 3,
+        PurchasePrice = 4000
+    };
+
+    var item11 = new OrderItem(11)
+    {
+        productId = 7,
+        Quantity= 12,
+        PurchasePrice = 360
+    };
+
     // orders
 
-    
+     var order1 = new Order(1) 
+     {
+        items = {item1, item2}  
+     };
+     var order2 = new Order(2)
+     {
+        items = {item11, item2}
+     };
+     var order3 = new Order(3)
+     {
+        items = {item10, item2}
+     };
+     var order4 = new Order(4)
+     {
+        items = {item3, item2, item6}
+
+     };
+     var order5 = new Order(5)
+     {
+        items = {item9, item7, item5, item8}
+     };
+     var order6 = new Order(6)
+     {
+        items = {item3, item4, item9, item6}
+
+     };
+     var order7 = new Order(7)
+     {
+        items = {item10, item11}
+
+     };
+
 }

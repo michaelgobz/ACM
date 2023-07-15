@@ -11,6 +11,8 @@ namespace acm.BL
         private int _orderId;
         public DateTimeOffset? OrderDate { get; set; }
 
+        public List<OrderItem> items;
+
         public int entityId
         {
             get 
@@ -32,6 +34,7 @@ namespace acm.BL
         {
             orderId = id;
             OrderDate = DateTimeOffset.Now();
+            items = new List<OrderItem>();
         }
 
         public static int instanceCounter
