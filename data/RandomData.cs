@@ -106,7 +106,7 @@ namespace acm.data
         homeAddress = address1,
         workAddress = address7
 
-    }
+    };
 
     var customer4 = new Customer(4) 
     {
