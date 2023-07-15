@@ -81,8 +81,6 @@ namespace acm.data
         LastName = "Goboola",
         Phonenumber = "+256758591449",
         EmailAddress = "raniahgobz@outlook.com",
-        homeAddress = address1,
-        workAddress = address1
 
     };
 
@@ -92,9 +90,7 @@ namespace acm.data
         LastName = "Nafula",
         Phonenumber = "+256758256449",
         EmailAddress = "nicole.nafula@outlook.com",
-        homeAddress = address3,
-        workAddress = address2
-
+    
     };
 
     var customer3 = new Customer(3) 
@@ -103,9 +99,7 @@ namespace acm.data
         LastName = "Moureen",
         Phonenumber = "+256759041449",
         EmailAddress = "ayebare.moureen@outlook.com",
-        homeAddress = address1,
-        workAddress = address7
-
+    
     };
 
     var customer4 = new Customer(4) 
@@ -114,9 +108,7 @@ namespace acm.data
         LastName = "Lynn",
         Phonenumber = "+256758976449",
         EmailAddress = "namugalu.lynn@outlook.com",
-        homeAddress = address7,
-        workAddress = address3
-
+        
     };
 
     var customer5 = new Customer(5) 
@@ -125,9 +117,7 @@ namespace acm.data
         LastName = "Mbaaga",
         Phonenumber = "+256762860919",
         EmailAddress = "atuhaire.mbaaga@outlook.com",
-        homeAddress = address1,
-        workAddress = address5
-
+     
     };
 
     var customer6 = new Customer(6) 
@@ -136,9 +126,7 @@ namespace acm.data
         LastName = "Nina",
         Phonenumber = "+256758591449",
         EmailAddress = "nicole.nina@outlook.com",
-        homeAddress = address4,
-        workAddress = address5
-
+ 
     };
 
     // products

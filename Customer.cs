@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace acm.BL
 {
     
-    public class Customer : IEntity
+    public class Customer : IEntity, IEntityWithAddresses
     {
 		private int _customerId;
 
@@ -73,17 +73,7 @@ namespace acm.BL
             set;
         }
 
-        public Address homeAddress
-        {
-            get;
-            private set;
-        }
-
-        public Address workAddress
-        {
-            get;
-            private set;
-        }
+		public Repository<Address> addresses {get; set;}
         public string Phonenumber
         {
             get;
@@ -96,12 +86,14 @@ namespace acm.BL
             set;
         }
 
-		public Customer(){
+		public Customer() :this(0)
+		{
 
 		}
 
 		public Customer(int id){
 			entityId = id;
+			addresses = new Repository<Address>(id);
 		}
 
         public bool Validate()

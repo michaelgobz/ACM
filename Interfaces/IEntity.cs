@@ -1,3 +1,6 @@
+using System.Collections.Generic;
+using acm.BL;
+
 namespace acm.Interfaces 
 {
     public interface IEntity
@@ -7,5 +10,9 @@ namespace acm.Interfaces
         bool Validate();
     }
 
-    
+    public interface IEntityWithAddresses 
+    {
+        Repository<Address> addresses;
+    }
+
 }
