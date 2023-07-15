@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
+using acm.Interfaces
 namespace acm.BL
 {
 
-    public class Product
+    public class Product : IEntity
     {
         private int _productId;
         public string productName { get; set; }
@@ -15,9 +16,12 @@ namespace acm.BL
             set;
         }
 
-        public int productId
+        public int entityId
         {
-            get;
+            get 
+            {
+                return _productId;
+            }
             set
             {
                 _productId = value;
@@ -33,16 +37,6 @@ namespace acm.BL
             productId = Id;
         }
 
-        public Product Retrieve(int productId)
-        {
-            return new Product();
-        }
-
-        public List<Product> Retrieve()
-        {
-            return new List<Product>();
-        }
-
         public bool Validate()
         {
             var isValid = true;
@@ -53,8 +47,10 @@ namespace acm.BL
             return isValid;
         }
 
-        public bool Save(){
-            return true;
+        public override string ToString()
+        {
+            var item = $"{entityId}: {productName} : {productDescription}: {currentPrice}";
+            return item;
         }
 
     }

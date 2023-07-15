@@ -1,20 +1,24 @@
 using System;
 using System.Collections.Generic;
+using acm.Interfaces;
 
 
-namespace acm.BL{
+namespace acm.BL
+{
 
-    public class Order
+    public class Order : IEntity
     {
         private int _orderId;
-        public DateTimeOffset? OrderDate {get; 
-        set {
-            OrderDate = DateTimeOffset.
-        }}
+        public DateTimeOffset? OrderDate { get; set; }
 
-        public int orderId {
-            get;
-            private set {
+        public int entityId
+        {
+            get 
+            {
+                return _orderId;
+            }
+            private set
+            {
                 _orderId = value;
             }
         }
@@ -30,25 +34,23 @@ namespace acm.BL{
             OrderDate = DateTimeOffset.Now();
         }
 
-        public Order Retrieve(int Id)
+        public static int instanceCounter
         {
-            return new Order();
-        }
-
-        public List<Order> Retrieve()
-        {
-            return new List<Order>();
+            get;
+            set;
         }
 
         public bool Validate()
         {
             var isValid = true;
-            if(OrderDate == null) isValid = false;
+            if (OrderDate == null) isValid = false;
             return isValid;
         }
 
-        public bool save(){
-            return true;
+        public override string ToString()
+        {
+            var item = $"{orderId}: {OrderDate}";
+            return item;
         }
     }
 

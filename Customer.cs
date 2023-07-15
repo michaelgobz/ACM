@@ -6,10 +6,11 @@ using System.Threading.Tasks;
 
 namespace acm.BL
 {
-    public class Customer
+    
+    public class Customer : IEntity
     {
 
-        public int CustomerId
+        public int entityId
         {
             get;
             private set;
@@ -67,12 +68,17 @@ namespace acm.BL
             set;
         }
 
-        public string Address
+        public Address homeAddress
         {
             get;
             private set;
         }
 
+        public Address workAddress
+        {
+            get;
+            private set;
+        }
         public string Phonenumber
         {
             get;
@@ -94,16 +100,10 @@ namespace acm.BL
             return isValid;
         }
 
-        public Customer Retrieve(int customerId)
+        public override string ToString()
         {
-
-            return new Customer();
-
-        }
-
-        public List<Customer> RetrieveCustomers()
-        {
-            return new List<Customer>();
+            var item = $"{CustomerId}: {FullName}: {EmailAddress}";
+            return item;
         }
     }
 

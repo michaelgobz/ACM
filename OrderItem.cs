@@ -1,9 +1,10 @@
 using System;
 using System.Collections.Generic;
+using acm.Interfaces;
 
 namespace acm.BL
 {
-    public class OrderItem
+    public class OrderItem : IEntity
     {
 
         private int _orderItemId;
@@ -12,9 +13,12 @@ namespace acm.BL
 
         public decimal? PurchasePrice { get; set; }
 
-        public int orderItemId
+        public int entityId
         {
-            get;
+            get 
+            {
+                return _orderItemId;
+            }
 
             private set
             {
@@ -32,6 +36,12 @@ namespace acm.BL
             orderItemId = Id;
         }
 
+        public static int instanceCounter
+        {
+            get;
+            set;
+        }
+
         public bool Validate()
         {
             var isValid = true;
@@ -42,19 +52,10 @@ namespace acm.BL
             return isValid;
         }
 
-        public OrderItem Retrieve(int Id)
+        public override string ToString()
         {
-            return new OrderItem();
-        }
-
-        public List<OrderItem> Retrieve()
-        {
-            return new List<OrderItem>();
-        }
-
-        public bool save()
-        {
-            return true;
+            var item = $"{entityId}: {productId}: {Quantity}: {PurchasePrice}";
+            return item;
         }
 
 
