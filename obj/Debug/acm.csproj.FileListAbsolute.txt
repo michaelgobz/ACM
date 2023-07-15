@@ -10,3 +10,5 @@ C:\Users\Administrator\Source\Repos\michaelgobz\ACM\obj\Debug\acm.csproj.Assembl
 C:\Users\Administrator\Source\Repos\michaelgobz\ACM\obj\Debug\acm.csproj.CoreCompileInputs.cache
 C:\Users\Administrator\Source\Repos\michaelgobz\ACM\obj\Debug\acm.dll
 C:\Users\Administrator\Source\Repos\michaelgobz\ACM\obj\Debug\acm.pdb
+D:\Desktop_files\projects\ACM\obj\Debug\acm.dll
+D:\Desktop_files\projects\ACM\obj\Debug\acm.pdb
