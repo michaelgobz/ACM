@@ -1,4 +1,5 @@
 ﻿using acm.BL;
+using tests.data;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 
@@ -131,5 +132,21 @@ namespace tests
             // Assert
             Assert.AreEqual(expected, actual);
         }
+		[TestMethod]
+		public void ValidateCustomerHasAtLeastOneAddress()
+		{
+			// arrange
+			var c =  data.customer1;
+			var c2 = data.customer2;
+
+			var expected = 1; //atleast 1
+
+			// act
+			var actual = c.addresses.GetItemsCount();
+
+			//assert
+			Assert.AreEqual(expected,actual);
+
+		}
     }
 }
